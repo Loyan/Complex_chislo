@@ -10,7 +10,7 @@ protected:
     double im;// уявна частина комплексного числа
 public:
     Complex(); //конструктор без параметрів
-    Complex(double x, double y); // конструктор з параметрами
+    Complex(double re, double im); // конструктор з параметрами
     void showComplex();  //вивід комплексного числа
     double module(); //розрахунок модуля комплексного числа
     Complex operator+(Complex num);  // операції: додавання   
@@ -44,7 +44,7 @@ Complex Complex::operator+(Complex num)// реалізація знаходже�
     return newNum;
 }
 Complex Complex::operator-(Complex num)// реалізація знаходження різницідвох комплексних чисел
-{    Complex newNum(re - num.re, im - num.imy);
+{    Complex newNum(re - num.re, im - num.im);
     return newNum;
 }
  
