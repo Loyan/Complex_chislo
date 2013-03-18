@@ -33,3 +33,30 @@ Complex::Complex(double x, double y)// реалізація конструкто
     this->x = x;
     this->y = y;
 }
+double Complex::module()// реалізація знаходження модуля від комплексного числа
+{
+    return sqrt(x*x + y*y );
+}
+ 
+Complex Complex::operator+(Complex num)// реалізація знаходження суми двох комплексних чисел
+{
+    Complex newNum(x + num.x, y + num.y);
+    return newNum;
+}
+Complex Complex::operator-(Complex num)// реалізація знаходження різницідвох комплексних чисел
+{    Complex newNum(x - num.x, y - num.y);
+    return newNum;
+}
+ 
+Complex Complex::operator*(Complex num)// реалізація знаходження добутку двох комплексних чисел
+{
+    Complex newNum(x * num.x - y * num.y, y * num.x + x * num.y);
+    return newNum;
+}
+ 
+Complex Complex::operator/(Complex num)// реалізація знаходження частки двох комплексних чисел
+{
+    Complex newNum((x * num.x + y * num.y) / (num.x * num.x + num.y * num.y), (y * num.x - x * num.y) / (num.x * num.x + num.y * num.y));
+    return newNum;
+}
+ 
