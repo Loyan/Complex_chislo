@@ -36,21 +36,21 @@ double Complex::module()// реалізація знаходження моду�
 {
     return sqrt(re*re + im*im );
 } 
-Complex Complex::operator+(Complex num)// реалізація знаходження суми двох комплексних чисел
+Complex Complex::operator+(Complex num)// перегрузка +
 {
     Complex newNum(re + num.re, im + num.im);
     return newNum;
 }
-Complex Complex::operator-(Complex num)// реалізація знаходження різницідвох комплексних чисел
+Complex Complex::operator-(Complex num)// перегрузка -
 {    Complex newNum(re - num.re, im - num.im);
     return newNum;
 } 
-Complex Complex::operator*(Complex num)// реалізація знаходження добутку двох комплексних чисел
+Complex Complex::operator*(Complex num)// перегрузка *
 {
     Complex newNum(re * num.re - im * num.im, im * num.re + re * num.im);
     return newNum;
 }
-Complex Complex::operator/(Complex num)// реалізація знаходження частки двох комплексних чисел
+Complex Complex::operator/(Complex num)// перегрузка /
 {
     Complex newNum((re * num.re + im * num.im) / (num.im * num.im + num.re * num.re), (im * num.re - re * num.im) / (num.re * num.re + num.im * num.im));
     return newNum;
