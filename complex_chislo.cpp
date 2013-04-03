@@ -96,8 +96,8 @@ Complex Complex::operator/(Complex num)// перегрузка /
     cout << '\n';
     cout << "Modul z1=" << z1.module() << '\n'; // виведення модуля першого комрлексного числа
     cout << "Modul z2=" << z2.module() << '\n'; // виведення модуля другого комрлексного числа
-    cout<<"Kyt z1 ="<<z1.kyt()<<'\n';
-    cout<<"Kyt z2 ="<<z2.kyt()<<'\n';
+    cout<<"Kyt z1 = "<<z1.kyt()<<'\n';
+    cout<<"Kyt z2 = "<<z2.kyt()<<'\n';
     cout<<"Trugonometruchna forma z1 ="<<z1.trugonometriya()<<'\n';// тригонометрична форма
     cout<<"Trugonometruchna forma z2 ="<<z2.trugonometriya()<<'\n';
     cout << "z1 + z2 = ";
