@@ -8,14 +8,10 @@ class Complex
 {
 protected:
     double re;// дійсна частина комплексного числа
-    double b;
-    double d;
-    double c;
     double im;// уявна частина комплексного числа
 public:
     double module(); //розрахунок модуля комплексного числа
     double kyt ();
-    double trugonometriya(); // розрахунок кута комплексного числа
     double get_module();
     double set_module(double*new_module);
     double get_kyt();
@@ -57,13 +53,6 @@ double Complex::kyt()
        if (im<=0&re>=0)
        return (- atan(im/re));       
 }
-double Complex::trugonometriya()// Переведення в тригонометричну форму
-{
-b=sqrt(re*re + im*im );
-d = cos(atan(im/re));
-c = sin(atan(im/re));
-       return b*(d+c);        
-}
 Complex Complex::operator+(Complex num)// перегрузка +
 {
     Complex newNum(re + num.re, im + num.im);
@@ -98,8 +87,6 @@ Complex Complex::operator/(Complex num)// перегрузка /
     cout << "Modul z2=" << z2.module() << '\n'; // виведення модуля другого комрлексного числа
     cout<<"Kyt z1 = "<<z1.kyt()<<'\n';
     cout<<"Kyt z2 = "<<z2.kyt()<<'\n';
-    cout<<"Trugonometruchna forma z1 ="<<z1.trugonometriya()<<'\n';// тригонометрична форма
-    cout<<"Trugonometruchna forma z2 ="<<z2.trugonometriya()<<'\n';
     cout << "z1 + z2 = ";
     (z1 + z2).showComplex(); // Виведення результатів реалізації процесу додавання
     cout << '\n';
