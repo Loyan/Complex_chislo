@@ -9,7 +9,11 @@ class Complex
 protected:
     double re;// дійсна частина комплексного числа
     double im;// уявна частина комплексного числа
+ double r;
+    double f;
 public:
+    double trig2alg();
+    double alg2trig(); 
     double module(); //розрахунок модуля комплексного числа
     double kyt ();
     double get_module();
@@ -52,6 +56,16 @@ double Complex::kyt()
        return atan(im/re);
        if (im<=0&re>=0)
        return (- atan(im/re));       
+}
+double Complex::alg2trig()
+{
+r=module();
+f=kyt();  
+}
+double Complex::trig2alg()
+{
+re=r*cos(f);
+im=r*sin(f);      
 }
 Complex Complex::operator+(Complex num)// перегрузка +
 {
